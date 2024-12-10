@@ -40,7 +40,9 @@ def main():
 
     response = llm(messages=chat_prompt_with_values.to_messages())
     data = parser.invoke(response.content)
-    print(data)
+    print(f"Title: {data.title}")
+    print(f"Description: {data.description}")
+    print(f"Packages: {data.packages}")
 
 if __name__ == "__main__":
     main()
